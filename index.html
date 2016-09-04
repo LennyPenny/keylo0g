@@ -5,6 +5,15 @@
     <title>wooo</title>
   </head>
   <body>
-    <h1>Hi</h1>
+    <p id="teeext"></p>
+    <script type="text/javascript">
+      var req = new XMLHttpRequest();
+      req.addEventListener("load", function(txt) {
+        var text  = document.querySelector("#teeext")
+        text.innerHTML += txt;
+      });
+      req.open("GET", "http://keyloog-steeem.rhcloud.com/keylo0g.txt");
+      req.send();
+    </script>
   </body>
 </html>
